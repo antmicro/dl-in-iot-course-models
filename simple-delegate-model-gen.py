@@ -30,7 +30,7 @@ def create_test_model_for_delegate_one_input():
     class TestDelegateModel(torch.nn.Module):
         def __init__(self):
             super(TestDelegateModel, self).__init__()
-            self.l = {}
+            self.l = {}  # noqa: E741
             self.l['x1'] = form_linear(
                 weights=[
                     [1, 0, 2, 4],
@@ -106,7 +106,7 @@ def create_test_model_for_delegate_two_inputs():
     class TestDelegateModel(torch.nn.Module):
         def __init__(self):
             super(TestDelegateModel, self).__init__()
-            self.l = {}
+            self.l = {}  # noqa: E741
             self.l['x1'] = form_linear(
                 weights=[
                     [1, 0, 2, 4],
