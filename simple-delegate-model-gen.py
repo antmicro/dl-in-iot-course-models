@@ -76,7 +76,9 @@ def create_test_model_for_delegate_one_input():
     torch.onnx.export(
         model,
         (data,),
-        "test-delegate-one-input.onnx"
+        "test-delegate-one-input.onnx",
+        input_names=["input"],
+        output_names=["output"]
     )
 
 
@@ -152,7 +154,9 @@ def create_test_model_for_delegate_two_inputs():
     torch.onnx.export(
         model,
         (data1, data2,),
-        "test-delegate-two-inputs.onnx"
+        "test-delegate-two-inputs.onnx",
+        input_names=["input_1", "input_2"],
+        output_names=["output"]
     )
 
 
